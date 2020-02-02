@@ -1,0 +1,9 @@
+body {
+    background-color: red;
+    display: flex;
+    background: url(./assets/images/1.jpg) no-repeat;
+}
+
+::placeholder {
+    color: red($color: #000000);
+}
