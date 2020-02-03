@@ -1,0 +1,11 @@
+@import './variable.scss';
+
+@keyframes logo-loading {
+    from {
+        background-color: $suoh;
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}
