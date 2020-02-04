@@ -29,9 +29,9 @@ module.exports = {
                     {
                         loader: 'url-loader',
                         options: {
-                            limit: 8192,
+                            limit: 1,
                             name: 'assets/images/[name].[contenthash].[ext]',
-                            publicPath: '/'
+                            publicPath: '../'
                         }
                     }
                 ]
@@ -41,7 +41,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'magazine',
-            template: 'index.html'
+            template: './src/index.html'
         }),
 
         new MiniCssExtractPlugin({
