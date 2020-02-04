@@ -6,7 +6,10 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     entry: {
-        index: './src/index.js'
+        index: './src/index.js',
+        about: './src/pages/about/index.js',
+        article: './src/pages/article/index.js',
+        magazine: './src/pages/magazine/index.js'
     },
     output: {
         path: path.resolve(__dirname, "public"),
@@ -43,6 +46,26 @@ module.exports = {
             title: 'magazine',
             template: './src/index.html'
         }),
+        new HtmlWebpackPlugin({
+            title: 'about',
+            filename: './pages/about/index.html', 
+            template: './src/pages/about/index.html',
+            chunks: ['about','about']
+        }),
+        new HtmlWebpackPlugin({
+            title: 'article',
+            filename: './pages/article/index.html', 
+            template: './src/pages/article/index.html',
+            chunks: ['article','article']
+        }),
+        new HtmlWebpackPlugin({
+            title: 'magazine',
+            filename: './pages/magazine/index.html', 
+            template: './src/pages/magazine/index.html',
+            chunks: ['magazine','magazine']
+        }),
+
+
 
         new MiniCssExtractPlugin({
             filename: 'css/[name]_bundle.[chunkHash:8].css'
