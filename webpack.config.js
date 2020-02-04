@@ -51,7 +51,7 @@ module.exports = {
         new CopyPlugin([
             {
                 from: path.resolve(process.cwd(), 'src/assets/static/'),
-                to: path.resolve(process.cwd(), 'dist/assets/static/') 
+                to: path.resolve(process.cwd(), 'public/assets/static/') 
             },
         ]),
 
