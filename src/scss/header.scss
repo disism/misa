@@ -1,10 +1,8 @@
 @import './variable.scss';
 @import './animation.scss';
-
+@import './mixin.scss';
 
 .header {
-    position: relative;
-    top: 3rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -16,22 +14,73 @@
     height: 100%;
     animation: logo-loading 1s cubic-bezier(1,0,.05,.81);
 }
+
 .header-logo {
     position: relative;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
 }
-.header-title {
-    position: relative;
-    font-size: 1.4rem;
-}
-.logo-subtitle {
-    position: relative;
-    font-size: 1rem;
-    width: 80%;
+
+// 标题和副标题的动画
+.header-title,
+.header-subtitle {
+    position: relative;  
+    color: transparent;
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: scaleX(0);
+        transform-origin: right;
+        // 当动画完成后，保持最后一个属性值
+        animation: Refresh 1s cubic-bezier(0.75, 0, 0, 1) forwards;
+      }
 }
 
+.header-title {
+    font-size: 2rem;
+    // 第一个设置的是显示时间 设置为 1 秒， 延迟为 0.5 秒
+    animation: fadeIn 1s .5s forwards;
+    &::before {
+        background: $from-color;
+      }
+}
+.header-subtitle {
+    width: 12rem;
+    animation: fadeIn 1s 1.5s forwards;
+    &::before {
+        background: $out-color;
+        // 延迟一秒播放
+        animation-delay: 1s;
+    }
+}
+/*
+ *   标题文字的样式
+ */
+.header-title-outline {
+    color: $base-color;
+    --fill-color: darkblue;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, var(--fill-color) 0%, var(--fill-color) 100%);
+    background-size: 0;
+    background-position: left;
+    background-repeat: no-repeat;
+    color: transparent;
+    background-clip: text;
+    transition: 0.3s linear;
+
+    &:hover {
+      background-size: 100%;
+    }
+  }
+
+// 头部菜单
 .header-menu {
     display: flex;
     flex-direction: row;
@@ -50,14 +99,14 @@
     .search-input {
         width: 3rem;      
         transition: .2s cubic-bezier(1,0,.05,.81);
-        background-color: $gray;
+        background-color: $input-default-color;
     }
     input {
         border: none;
         height: 3rem;
         padding: 0 0 0 3rem;
         border-radius: .5rem;
-        background-image: url('../assets/static/search.svg'); 
+        background-image: url('../assets/static/icon-svg/search.svg'); 
         background-repeat: no-repeat;  
         background-size: 1.8rem;
         background-position-y: center;
@@ -65,4 +114,6 @@
     }
 }
 
-@import './main.scss';
+
+
+
