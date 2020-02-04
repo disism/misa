@@ -5,17 +5,20 @@ import './scss/footer.scss'
 
 
 
-const searchInp = document.querySelector('.search-input')
+export function openSearch() {
+  const searchInp = document.querySelector('.search-input')
 
-searchInp.addEventListener('click', function () {
-    searchInp.style.width = '10rem'
-    searchInp.style.height = '2.5rem'
-})
-searchInp.addEventListener('blur', function () {
-    searchInp.style.width = '3rem'
-    searchInp.style.height = '3rem'
-})
+  searchInp.addEventListener('click', function () {
+      searchInp.style.width = '10rem'
+      searchInp.style.height = '2.5rem'
+  })
+  searchInp.addEventListener('blur', function () {
+      searchInp.style.width = '3rem'
+      searchInp.style.height = '3rem'
+  })
+}
 
+openSearch()
 
 
 const slider = document.querySelector('.main-magazine');
