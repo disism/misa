@@ -1,4 +1,5 @@
 @import './variable.scss';
+@import './mixin.scss';
 
 @keyframes logo-loading {
     from {
@@ -9,3 +10,25 @@
         width: 0;
     }
 }
+
+@keyframes fadeIn {
+    to {
+        @include gradient($grad-left, $grad-right);
+    }
+}
+  
+@keyframes Refresh {
+50% {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+50.1% {
+    transform-origin: left;
+}
+
+to {
+    transform-origin: left;
+}
+}
+  

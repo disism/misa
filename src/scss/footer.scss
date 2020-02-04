@@ -1,0 +1,18 @@
+@import './variable.scss';
+@import './animation.scss';
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid $line-color;
+    margin: 0 1rem;
+    padding: 1rem 0;
+}
+
+.social-link {
+    display: flex;
+}
+.footer-slash {
+    margin: 0 1rem;
+}

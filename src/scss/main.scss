@@ -1,13 +1,200 @@
+@import './variable.scss';
+@import './animation.scss';
+@import './mixin.scss';
+
+@mixin tag-padding { 
+    padding: .3rem;
+}
 
 .main-header {
     display: flex;
-    flex-direction: row;;
+    flex-direction: row;
 }
 .main-header-image {
     width: 50vw;
 }
+
+.header-grad {
+    @include gradient($ROKUSYOH, $UMEMURASAKI)
+}
+
 .declaration {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+.dec-text {
+    font-size: 1.65rem;
+}
+.main-content {
+    margin: 0 1rem;
+}
+
+.content-section-header {
+    display: flex;
+    border-top: 1px solid $line-color;
+    border-bottom: 1px solid $line-color;
+    padding: 1rem;
+}
+
+.content-section-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+
+.content-layout-tc {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 0;
+    div {
+        flex: 1;
+    }
+}
+
+.tc-left-image {
+    width: 100%;
+}
+.tc-new-daily {
+    font-size: 3rem;
+}
+.tc-center {
+    padding: 0 1rem;
+}
+
+.hot-tag {
+    position: relative;
+    top: .5rem;
+    background-color: $shinbashi;
+    @include tag-padding();
+}
+
+.page-deta-span {
+    font-size: .8rem;
+}
+.news-list {
+    span {
+        cursor: pointer;
+        transition: all .3s;
+    }
+    li:not(:last-child) {
+        padding-bottom: 1rem;
+        margin: 1rem 0;
+        border-bottom: 2px dashed $line-color;
+    }
+}
+
+
+.subscribe {
+    form { 
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    input {
+        box-sizing: border-box;
+        height: 3rem;
+        padding: 0 1rem;
+        width: 100%;
+        border: none;
+        margin: 0 auto 1rem;
+        border-radius: .5rem;
+        background-color: $input-default-color;
+    }
+}
+
+
+
+// span group 
+.debian-span {
+    background-color: $debian-span-color;
+    @include tag-padding();
+}
+.angular-span {
+    background-color: $angular-span-color;
+    @include tag-padding();
+}
+
+.ecma-span {
+    background-color: $ecma-span-color;
+    @include tag-padding();
+}
+
+
+// main-magazine
+.main-magazine {
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin: 1rem 0;
+}
+.magazine-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: .3rem solid whitesmoke;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+    img {
+        border-radius: .5rem;
+        width: 100%;
+        height: 10rem;
+        align-items: center;
+    }
+}
+.magazine-number {
+    font-size: 4rem;
+    border-bottom: 2px solid $line-color;
+}
+.magazine-date-span {
+    font-size: .7rem;
+}
+
+// focus-content
+
+// 专注 web 开发
+
+.focus-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 0;
+    div {
+        flex: 1;
+    }
+    
+    img {
+        width: 100%;       
+    }
+    
+    a:hover {
+        outline: 2px dashed white;
+        outline-offset: -25px;
+    }
+    a:active {
+        outline: 2px dashed white;
+        outline-offset: -20px;
+        transition: all .5s ;
+    }
+    &::hover {
+        transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
+
+
+.more {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.rainbow {
+    text-shadow: 
+    3px 3px 0 #D9AB42, 
+    10px 10px 0 #00896C;
 }

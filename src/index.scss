@@ -1,9 +1,14 @@
 @import './scss/variable.scss';
+@import './scss/mixin.scss';
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
     background-color: $base-color;
-    list-style: none;
+    font-family: Georgia, "Times New Roman", "STSong", STSong, serif;
 }
 
 a {
@@ -12,21 +17,41 @@ a {
 }
 
 
+a {
+    text-decoration: none;
+    background-image: linear-gradient($alink-color, $alink-color);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 50% 2px;
+    padding-bottom: 2px;
+    transition: background-size .5s cubic-bezier(1,0,.05,.81);
+}
+
 a:hover {
-    .link-animation {
-        width: 100%; height: 2px;
-    }
+    background-size: 100% 2px;
+    color: $ahover-color;
 }
 
-
-.link-animation {
-    margin-top: .34rem;
-    width: 50%;
-    height: 2px;
-    background-color: black;
-    transition: .5s cubic-bezier(1,0,.05,.81);
-}
 
 input {
     outline: none;
 }
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    background-color: $input-default-color;
+    &:active {
+        box-shadow: 0 0 0 1px $alink-color;
+    }
+}
+@include scrollbars(.5em, $input-default-color);
+ 
