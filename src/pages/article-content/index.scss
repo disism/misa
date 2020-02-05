@@ -1,0 +1,47 @@
+@import '../../scss/variable.scss';
+
+
+.article-content-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 1rem;
+    padding: 1rem 0;
+    border-top: 1px solid $line-color;
+    section {
+        flex: 1;
+    }
+}
+
+
+.article-title {
+    font-size: 2rem;
+    margin: .5rem 0;
+}
+.article-center-main {
+    margin: 0 1rem;
+}
+.article-tag {
+    margin-top: 1rem;
+    border-top: 1px solid $line-color;
+    span {
+        margin-right: .5rem;
+    }
+}
+.article-left {
+    padding: 1rem;
+}
+.article-right {
+    padding: 1rem;
+}
+.article-content-title-list {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    background-color: $input-default-color;
+    li {
+        list-style: none;
+        padding: .5rem;
+    }
+}

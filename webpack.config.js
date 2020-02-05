@@ -9,7 +9,9 @@ module.exports = {
         index: './src/index.js',
         about: './src/pages/about/index.js',
         article: './src/pages/article/index.js',
-        magazine: './src/pages/magazine/index.js'
+        magazine: './src/pages/magazine/index.js',
+        articleContent: './src/pages/article-content/index.js',
+        magazineContent: './src/pages/magazine-content/index.js'
     },
     output: {
         path: path.resolve(__dirname, "public"),
@@ -63,6 +65,18 @@ module.exports = {
             filename: './pages/magazine/index.html', 
             template: './src/pages/magazine/index.html',
             chunks: ['magazine','magazine']
+        }),
+        new HtmlWebpackPlugin({
+            title: 'article-content',
+            filename: './pages/article-content/index.html', 
+            template: './src/pages/article-content/index.html',
+            chunks: ['articleContent','articleContent']
+        }),
+        new HtmlWebpackPlugin({
+            title: 'magazine-content',
+            filename: './pages/magazine-content/index.html', 
+            template: './src/pages/magazine-content/index.html',
+            chunks: ['magazineContent','magazineContent']
         }),
 
 
