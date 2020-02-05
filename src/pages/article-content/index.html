@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="../../assets/static/icon-svg/icons8-m-64.png" type="image/x-icon">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+
+    <!-- header -->
+    <section class="header" id="top">
+        <div class="header-logo">
+            <a href="/">
+                <div class="header-title">
+                    <p class="header-title-outline">ＤＩＳＩＳＭ　ＭＡＧＡＺＩＮＥ</p>
+                </div>
+                <div class="header-subtitle">
+                    <p class="hub-style">disism.com 的技术杂志</p>
+                </div>
+            </a>
+        </div>
+        <div class="header-menu">
+            <a href="./index.html">
+                <div>技术专题页</div>
+            </a>
+            <a href="../magazine/index.html">
+                <div>期刊杂志</div>
+            </a>
+            <a href="../about/index.html">
+                <div>关于本站</div>
+            </a>
+        </div>
+        <div class="header-right">
+            <div class="header-disism-link">
+                <a href="https://disism.com" class="go-official-website">disism.com</a>
+            </div>
+
+            <div class="header-search">
+                <form action="">
+                    <input type="text" placeholder="查找" class="search-input">
+                <form/>
+            </div>
+        </div>
+    </section>
+    
+    <section class="article-content-main">    
+        <section class="article-left">
+            
+            <img src="../../assets/static/article-svg/list-is-empty-3.svg" alt="">
+
+            <section class="article-tag">
+                <h1>标签</h1>
+                <span><a href="">MongoDB</a></span>
+                <span><a href="">Debian10</a></span>
+                <span><a href="">Linux</a></span>
+                <span><a href="">Data Base</a></span>
+            </section>
+        </section>
+
+        <section class="article-center-main">
+            <div class="article-title">
+                Install MongoDB server 4.2 on Debian 10 / 示例文章
+            </div>
+
+            <span class="page-deta-span">由 <a href="/">N.HVTURINGGA</a> 发布于 2019 年 12 月 7 日</span class="page-deta-span">
+
+            <div class="article-content" style="margin-top: 2rem;">
+                <article>
+                    <p>Follow these steps to install MongoDB Community Edition using the apt package manager.</p>
+
+                    <h2>1. Import the public key used by the package management system.</h2>
+                    <p>From a terminal, issue the following command to import the MongoDB public GPG Key from https://www.mongodb.org/static/pgp/server-4.2.asc:</p>
+                    <code>
+                        wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -
+                    </code>
+                    <p>The operation should respond with an OK.</p>
+
+                    <p>
+                        However, if you receive an error indicating that gnupg is not installed, you can:
+
+                        Install gnupg and its required libraries using the following command:
+                    </p>
+
+                    <code>sudo apt-get install gnupg</code>
+                    <p>Once installed, retry importing the key:</p>
+
+                    <code>wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add </code>
+
+                    <p>请按照以下步骤使用apt软件包管理器安装MongoDB Community Edition。</p>
+
+                    <h2>2. Create a /etc/apt/sources.list.d/mongodb-org-4.2.list file for MongoDB.</h2>
+                    <code>
+                        sudo systemctl status mongod
+                    </code>
+                    <p>You can optionally ensure that MongoDB will start following a system reboot by issuing the following command:</p>
+                    <code>
+                        sudo systemctl enable mongod
+                    </code>
+                    <h2>3. Stop MongoDB.</h2>
+                    
+                    
+                    <p>As needed, you can stop the mongod process by issuing the following command:</p>
+
+                    <code>sudo systemctl stop mongod</code>
+                </article>
+            </div>
+        </section>
+
+        <section class="article-right">
+            <section class="article-content-title-list">
+                <li>1. Import the public key used by the package management system.</li>
+                <li>2. Create file for MongoDB.</li>
+                <li>3. Stop MongoDB.</li>
+            </section>
+        </section>
+        
+    </section>
+
+    <!-- footer -->
+    <section class="footer">
+        <div >
+            ©2020 MAGAZINE 
+            <a href="https://disism.com" class="go-official-website">
+                ＤＩＳＩＳＭ
+            </a>
+            - All Rights Reserved.
+        </div>
+
+        <div class="social-link">
+            <div>
+                <a href="https://www.instagram.com/hvturingga/">
+                    INSTAGRAM
+                </a>
+            </div>
+            <span class="footer-slash">/</span>
+            <div>
+                <a href="https://t.me/disismgroup">
+                    TELEGRAM
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
