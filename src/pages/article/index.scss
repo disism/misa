@@ -52,3 +52,25 @@
         background-color: $input-default-color;
     }
 }
+
+@media screen and (max-width: 700px) {
+    .article-main {
+        display: flex;
+        flex-direction: column;
+    }
+    .pagination-list {
+        display: flex;
+        flex-direction: row;
+        white-space: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        li {
+            padding: .5rem;
+            margin: .2rem;
+            background-color: $from-color;
+        }
+        .pagination-active {
+            background-color: $input-default-color;
+        }
+    }
+}
