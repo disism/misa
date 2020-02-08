@@ -198,3 +198,27 @@
     3px 3px 0 #D9AB42, 
     10px 10px 0 #00896C;
 }
+
+
+@media screen and (max-width: 700px) {
+    .main-header {
+        flex-direction: column;
+        
+        margin-bottom: 1rem;
+    }
+    .main-header-image {
+        width: 100vw;
+    }
+    .declaration {
+        align-items: center;
+    }
+    .content-layout-tc {
+        flex-direction: column;
+    }
+    .tc-center {
+        padding: 0;
+    }
+    .focus-content {
+        flex-direction: column;
+    }
+}

@@ -4,8 +4,7 @@ import './scss/main.scss'
 import './scss/footer.scss'
 
 
-
-export function openSearch() {
+function openSearch() {
   const searchInp = document.querySelector('.search-input')
 
   searchInp.addEventListener('click', function () {
