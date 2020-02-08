@@ -3,8 +3,7 @@ module.exports = {
       require('autoprefixer')({
         "browsers": [
             "> 5%",
-            "last 2 versions",
-            "@-webkit-keyframes"
+            "last 2 versions"
         ]
       })
     ]
