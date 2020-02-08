@@ -1,1 +1,24 @@
 @import '../../scss/variable.scss';
+
+.magazine-content-main {
+    margin: 1rem;
+    border-top: 1px solid $line-color;
+}
+.magazine-content-main-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.mcmh-left {
+    padding: 1rem;
+    img {
+        border: .5rem solid $input-default-color;
+        border-radius: .5rem;
+        width: 100%;
+    }
+}
+.magazine-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

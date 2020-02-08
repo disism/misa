@@ -8,6 +8,7 @@
     justify-content: space-between;
     margin: 1rem;
 }
+
 .logo-loading-style {
     position: absolute;
     top: 0;
@@ -117,3 +118,44 @@
 
 
 
+// 在手机上的显示
+@media screen and (max-width: 700px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+    }
+    // 头部菜单
+    .header-menu {
+        display: flex;
+        flex-direction: row;
+        a {
+            margin: 0;
+            margin-right: 1rem;
+            padding: 1rem 0;
+        }
+        
+    }
+    .header-right {
+        display: flex;
+        justify-content: space-between;
+        
+    .header-disism-link {
+        a {
+            line-height: 3rem;
+        }
+    }
+}
+
+    // 头部搜索
+    .header-search {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+        height: 2.5rem;
+        .search-input {    
+            transition: 0;
+            background-color: $input-default-color;
+        }
+    }
+} 

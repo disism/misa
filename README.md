@@ -4,7 +4,7 @@
 
 [demo](https://misa-beige.now.sh/) |　[示例网站](https://misa-beige.now.sh/)
 
-本项目使用　Ｗebpack & Sass 创建的静态杂志网站的模板。探索中文网页的排版和实践。
+本项目使用　Ｗebpack & Sass 创建的静态杂志网站的响应式网页模板。探索中文网页的排版和实践。
 
 ```
 git clone https://github.com/disism/misa.git && cd misa
