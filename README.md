@@ -23,3 +23,5 @@ npm run build
 ```
 
 欢迎访问 [disism.com](https://disism.com) 获取更多内容
+
+[screenshot!](./Screenshot_2020-02-09 magazine.png)
