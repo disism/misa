@@ -1,3 +1,3 @@
 import './index.scss'
 
-import openSearch from '../../index'
+import '../../index'
